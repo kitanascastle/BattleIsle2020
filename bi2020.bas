@@ -15,7 +15,7 @@
 #INCLUDE "IPHLPAPI.INC"
 #INCLUDE "..\SPEECH.INC"
 %WINAPI = 1  'verhindern, daﬂ APPLOG.INC Typen aus der WinAPI selber definiert
-#INCLUDE "..\APPLOG.INC"
+#INCLUDE "APPLOG.INC"
 #INCLUDE "BI2CONST.INC"
 #INCLUDE "BI2TYPES.INC"
 
@@ -8899,7 +8899,7 @@ FUNCTION PBMAIN&
         'DEBUG
     '      i& = LoadMission&("MIS\MISS152.DAT", 0)
     '      i& = LoadMission&("Test\edtunits.dat", 0)
-        LoadMission&("Test\MISS903.dat", 0, defaultDifficulty&, 0)
+        LoadMission&("Test\MISS903", 0, defaultDifficulty&, 0)
         CALL InitMap(0, defaultDifficulty&)
         lasttimeupdate! = gametime!
       CASE %STARTACTION_NONE
